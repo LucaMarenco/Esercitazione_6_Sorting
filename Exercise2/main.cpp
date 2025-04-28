@@ -22,10 +22,13 @@ string ArrayToString(const vector<T>& v)
 }
 
 
-inline bool operator< (const ClassObj& lhs, const ClassObj& rhs) { return lhs.value < rhs.value; }
 
 int main(int argc, char *argv[])   
 {
+	cout << "argc: " << argc << endl;
+    for(int a = 0; a < argc; a++)
+        cout << argv[a] << " ";
+    cout << endl;
 	
     size_t m = 10000;
 
@@ -33,26 +36,25 @@ int main(int argc, char *argv[])
 	{
 		istringstream st(argv[1]);
 		st >> m;
+		cout << "use value: "  << m << endl;
 	}
-
+	else
+        cerr << "use default value: "  << m << endl;
 
     vector<int> v1(m);
 	std::iota(v1.begin() , v1.end(), -4);
 
     
-
     vector<double> v2(m);
-	for (unsigned int i=0; i<m; i++)
+	for (size_t i=0; i<m; i++)
 		v2[i] = rand() / ((double)RAND_MAX); 
 
    
-
-    vector<int> v3(m, 0);
-	for (unsigned int i=0; i<m/; i++)
-	std::copy(v1.begin(), v1.begin() + floor(m * 0.5) + 1; v3.begin());
-	for (unsigned int i=floor(m * 0.5) + 1; i<m; i++)
-		v3[i] = rand() / % 1000;
-
+	vector<int> v3(m, 0);
+	for (size_t i = floor(m * 0.5) + 1; i < m; i++)
+		v3[i] = rand() % 1000;
+	
+	copy(v1.begin(), v1.begin() + floor(m * 0.5) + 1, v3.begin());
 
 
 
