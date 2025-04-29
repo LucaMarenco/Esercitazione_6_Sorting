@@ -17,9 +17,9 @@ void BubbleSort(vector<T>& v)
 {
 	const unsigned int n = v.size();
 	
-	for (unsigned int i= 0; i < n-1 ; i++)
+	for (size_t i= 0; i < n-1 ; i++)
 	{
-		for (unsigned int j= i+1; j < n ; j++)
+		for (size_t j= i+1; j < n ; j++)
 		{
 			if (v[j] < v[i]) {
 				swap(v[i], v[j]); 
@@ -62,8 +62,5 @@ void HeapSort(vector<T>& v)
         toHeap(v, i, 0);
     }
 }
-
-
-
 
 }

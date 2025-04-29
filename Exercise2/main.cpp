@@ -8,6 +8,7 @@
 #include "SortingAlgorithm.hpp"
 using namespace std;
 
+/*
 template<typename T>
 string ArrayToString(const vector<T>& v)
 {
@@ -20,7 +21,7 @@ string ArrayToString(const vector<T>& v)
 
     return toString.str();
 }
-
+*/
 
 
 int main(int argc, char *argv[])   
